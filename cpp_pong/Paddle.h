@@ -12,5 +12,8 @@ public:
 	Paddle(float pos_x, float pos_y, float width, float height);
 	void Draw();
 	void Update();
+
+protected:
+	void LimitMovement();
 };
 

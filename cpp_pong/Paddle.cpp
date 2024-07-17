@@ -8,7 +8,8 @@ Paddle::Paddle(float pos_x, float pos_y, float width, float height) {
 }
 
 void Paddle::Draw() {
-	DrawRectangle(x, y,width, height, WHITE);
+	//DrawRectangleRounded(Rectangle{x, y, width, height},0.8, 0, WHITE);
+	DrawRectangle(x, y, width, height, WHITE);
 }
 
 void Paddle::Update() {
@@ -19,11 +20,16 @@ void Paddle::Update() {
 		y += speed;
 	}
 
+	
+
+	LimitMovement();
+}
+
+void Paddle::LimitMovement() {
+	if (y + height >= GetScreenHeight()) {
+		y = GetScreenHeight() - height;
+	}
 	if (y <= 0) {
 		y = 0;
-	}
-
-	if (y + height >=  GetScreenHeight()) {
-		y = GetScreenHeight() - height;
 	}
 }

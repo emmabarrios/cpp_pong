@@ -1,0 +1,7 @@
+* Agregar colision a la parte superior de las paletas
+* Agregar sonido a las colisiones
+* Agregar sonido de score
+* Agregar vidas 
+* Agregar game over
+* Agregar game start
+* Ajustar la fuente con el proyecto de space invaders
